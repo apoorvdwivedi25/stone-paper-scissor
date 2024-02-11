@@ -1,0 +1,83 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+
+
+
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+import random
+images=[rock,paper,scissors]
+player_1=input("Enter your name player 1 ").upper()
+player_2=input("Enter your name player 2 ").upper()
+print("hii "+player_1+"  "+player_2+" how are you,I think you are fine, Now you are in the Game!!")
+user_1= int(input(player_1+" Enter the 0 for Rock, 1 for Paper, 2 for Secissor - "))
+user_2= int(input(player_2+" Enter the 0 for Rock, 1 for Paper, 2 for Secissor - "))
+if user_1>=3 or user_1<0:
+    print("Enter a valid choice, You entered a wrong choice!! TRY AGAIN")
+    if user_2>=3 or user_2<0:
+        print("Enter a valid choice, You entered a wrong choice!! TRY AGAIN")
+else:
+    print(images[user_1])
+    print(images[user_2])
+    if user_1==user_2:
+        print("You both entered same!! Match Drawn")
+    elif user_1==0 and user_2==2:
+        print("You win "+ player_1)
+    elif user_1==2 and user_2==1:
+        print("You win ",+player_2)
+    elif user_2>user_1:
+        print("You Win ",player_2)
+    elif user_1==1 and user_2==0:
+        print("You win ",player_2)
+    elif user_1==2 and user_2==0:
+        print("You Lose ",player_2)
